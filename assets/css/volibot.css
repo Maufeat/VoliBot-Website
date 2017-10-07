@@ -1,0 +1,415 @@
+
+@font-face {
+    font-family: BeaufortforLOL;
+    src: url("/assets/fonts/BeaufortforLOL-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: BeaufortforLOL;
+    font-weight:bold;
+    src: url("/assets/fonts/BeaufortforLOL-Bold.otf") format("opentype");
+}
+
+body {
+    font-family: 'BeaufortforLOL', serif;
+    background-color: #0a0a0c;
+    position: relative;
+}
+.h2, h2 {
+    color: #d3c7aa;
+}
+a, p {
+    color: #7d6033;
+    transition: color 1s cubic-bezier(.06,.81,0,.98);
+}
+a:hover {
+    color: #f1e6d0;
+}
+.logo{
+    height:150px;
+    padding:30px;
+}
+.logo img{
+    height:100px;
+    width:auto;
+}
+header{
+    position:relative;
+    z-index: 999999;
+    padding:15px 0;
+    height: 180px;
+}
+header h1{
+    line-height: 75px;
+    color: #f1e6d0;
+    font-weight:bold;
+    font-size:60px;
+}
+header h2{
+    text-transform: uppercase;
+    opacity:0.8;
+    font-size:24px;
+}
+header .add-space{
+    background: rgba(213, 213, 213, 0.1);
+    width: 728px;
+    height: 90px;
+    position:relative;
+    float:right;
+    top:20px;
+}
+.navbar {
+    font-family: 'BeaufortforLOL', serif,"Times New Roman";
+    font-size: 14px!important;
+    font-weight: 700;
+    height: 52px;
+    line-height: normal;
+    text-align: left;
+    width: 100%;
+    z-index: 99999;
+    padding:0 10px;
+}
+.navbar .navbar-nav .vertical-divider{
+    border-left: 2px solid #262626;
+    display: inline-block;
+    font-size: 14px;
+    height: 30px;
+    margin: 15px .25em;
+    vertical-align: top;
+}
+.navbar .navbar-nav .nav-item{
+    margin:10px;  /* and that, will result in a 10px gap */
+}
+.navbar .navbar-nav .nav-item:last-child{
+    margin-right:0;
+}
+.navbar .navbar-nav .nav-item:first-child{
+    margin-left:0;
+}
+.navbar .navbar-nav .nav-item a:hover {
+    color: #f1e6d0;
+    background-color: #14181d;
+    box-shadow: 0 0 16px 8px rgba(0,0,0,.5);
+}
+.navbar .navbar-nav .nav-item a {
+    color: #c9aa71;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    width:100%;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 15px 0;
+    text-transform: uppercase;
+    background-color: #101217;
+    border: 1px solid #32281f;
+    box-shadow: 0 0 16px 5px rgba(0,0,0,.4);
+    transition: all 1s cubic-bezier(.06,.81,0,.98);
+}
+.navbar .navbar-nav .nav-item.active a {
+    border-color: #7e633b;
+    color: #fff;
+}
+main{
+    margin: 35px 0 50px;
+}
+.background-greyscale{
+    background-image: url(http://static.zerochan.net/Volibear.full.1523582.jpg);
+    background-size: cover;
+    background-position: left top;
+    position: absolute;
+    top: -50px;
+    right: 0;
+    bottom: 50%;
+    left: 0;
+    opacity: .2;
+}
+.background-greyscale .gradient{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0a0a0c;
+    background-image: linear-gradient(180deg,#0a0a0c,transparent,#0a0a0c);
+    background-color: transparent;
+}
+.volirow-two{
+ height:100%;
+}
+.volitem-paddder{
+    padding: 10px;
+}
+.volitem{
+    transition-property: transform,z-index,border,box-shadow;
+    transition-timing-function: ease,linear,ease,ease;
+    transition-duration: .3s,.3s,.3s,.3s;
+    border: 1px solid #32281f;
+    box-shadow: 0 0 16px 5px rgba(0,0,0,.4);
+    color: #c4b998;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    box-pack: end;
+    -moz-justify-content: flex-end;
+    -ms-justify-content: flex-end;
+    -o-justify-content: flex-end;
+    justify-content: flex-end;
+    -ms-flex-pack: end;
+    box-orient: vertical;
+    box-direction: normal;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    background-color: #101217;
+    height: 250px;
+    position: relative;
+    width: 100%;
+}
+.volitem:hover{
+    transition-timing-function: ease,step-start;
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    border: 1px solid #927345;
+    box-shadow: 0 0 16px 14px rgba(0,0,0,.4);
+    z-index: 15!important;
+}
+.volirow-two .volitem{
+    height:100%;
+    cursor: default;
+}
+.volirow-two .volitem:hover{
+    transition-timing-function: ease,step-start;
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+.volimage{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-attachment: local;
+    background-color: #0a0a0c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: opacity .4s ease;
+    width: 100%;
+}
+.volimage span{
+    text-align: center;
+    display: block;
+    font-size: 60px;
+}
+.volimage small{
+    text-align:center;
+    display:block;
+    font-size:32px;
+    text-transform: uppercase;
+    opacity:0.5;
+}
+.volimage .news-wrapper{
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    overflow-y:scroll;
+    padding-bottom:65px;
+    transition:all .3s;
+}
+.volitem:hover .news-wrapper{
+    padding-bottom: 105px;
+}
+::-webkit-scrollbar-track {
+    background-color: #b46868;
+} /* the new scrollbar will have a flat appearance with the set background color */
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+} /* this will style the thumb, ignoring the track */
+
+::-webkit-scrollbar-button {
+    background-color: #7c2929;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+
+::-webkit-scrollbar-corner {
+    background-color: black;
+}
+.volimage .news-wrapper .news-item{
+    width: 100%;
+    height: auto;
+    border: 1px solid #32281f;
+    padding:10px;
+    transition:all .3s;
+    cursor: pointer;
+    min-height:100px;
+    margin-bottom:10px;
+    position:relative;
+    overflow:hidden;
+}
+.news-item i.fa {
+    position: absolute;
+    font-size: 50px;
+    opacity: 0.15;
+    right: 0;
+    bottom: -5px;
+}
+.news-item i.fa.fa-youtube{
+
+}
+.volimage .news-wrapper .news-item:hover{
+    border: 1px solid #7e633b;
+}
+.volimage-1{
+    background-image: url(http://static.zerochan.net/Volibear.full.1523582.jpg);
+    background-position: 80.6771% 38.7466%;
+    opacity: 1;
+}
+.volitem .description{
+    background-color: #101217;
+    z-index: 5;
+}
+.volitem .description .title{
+    background-color: #101217;
+    border-top: 1px solid #7e633b;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    height: 60px;
+    padding: 14px 12px;
+}
+.volitem .description .title h2{
+    font-family: 'BeaufortforLOL', serif,"Arial", sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #c4b998;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.volitem .description .title h4 {
+    font-family: Spiegel, Helvetica, Cambria, sans-serif;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #937341 !important;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 0;
+}
+.volitem .description .read-more{
+    font-family: Beaufort for LOL Medium,Arial,sans-serif;
+    font-weight: 400;
+    transition: .4s ease;
+    background-color: #14181d;
+    border-top: 1px solid transparent;
+    color: #937341;
+    font-size: 11px;
+    height: 0;
+    letter-spacing: .3em;
+    line-height: 45px;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    z-index: 3;
+}
+.volitem:hover .read-more{
+    border-top: 1px solid #7e633b;
+    height: 45px;
+}
+footer{
+    background-color: #0a0a0c;
+    border-top: 1px solid #937341;
+    width:100%;
+    padding:10px 0;
+}
+
+/** **/
+/* Turn on a 13x13 scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 13px;
+}
+
+::-webkit-scrollbar-button:vertical {
+    background-color: silver;
+    border: 1px solid gray;
+}
+
+/* Turn on single button up on top, and down on bottom */
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+/* Turn off the down area up on top, and up area on bottom */
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+/* Place The scroll down button at the bottom */
+::-webkit-scrollbar-button:vertical:increment {
+    display: none;
+}
+
+/* Place The scroll up button at the up */
+::-webkit-scrollbar-button:vertical:decrement {
+    display: none;
+}
+
+/* Place The scroll down button at the bottom */
+::-webkit-scrollbar-button:horizontal:increment {
+    display: none;
+}
+
+/* Place The scroll up button at the up */
+::-webkit-scrollbar-button:horizontal:decrement {
+    display: none;
+}
+
+::-webkit-scrollbar-track:vertical {
+    background-color: blue;
+    border: 1px dashed pink;
+}
+
+/* Top area above thumb and below up button */
+::-webkit-scrollbar-track-piece:vertical:start {
+    border: 0px;
+}
+
+/* Bottom area below thumb and down button */
+::-webkit-scrollbar-track-piece:vertical:end {
+    border: 0px;
+}
+
+/* Track below and above */
+::-webkit-scrollbar-track-piece {
+    background-color: #32281f;
+}
+
+/* The thumb itself */
+::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #7e633b;
+}
+
+/* The thumb itself */
+::-webkit-scrollbar-thumb:horizontal {
+    height: 50px;
+    background-color: gray;
+}
+
+/* Corner */
+::-webkit-scrollbar-corner:vertical {
+    background-color: black;
+}
+
+/* Resizer */
+::-webkit-scrollbar-resizer:vertical {
+    background-color: gray;
+}
