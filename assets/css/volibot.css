@@ -99,21 +99,36 @@ header .icon:after{
 header .img-container{
     position: relative;
     z-index: 2;
+
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+header .img-container:hover h1{
+    text-shadow: 0px 0px 50px #ffefd7;
 }
 header .img-container h1{
     transition:all 0.2s ease-out;
-    text-shadow: 0px 0px 50px #7e633bc4;
+    text-shadow: 0px 0px 25px #7e633bc4;
     font-size: 70px;
     line-height: 105px;
 }
 
 header .home{
+    text-transform:uppercase;
     font-family: Beaufort for LOL Medium,Arial,sans-serif;
-    width: 125px;
+    width: 150px;
     z-index: -1;
     position: absolute;
     bottom: 12px;
-    left: -180px;
+    left: -200px;
 }
 header .home .bg{
     height: 43px;
@@ -137,12 +152,13 @@ header .home span{
 }
 
 header .extra{
+    text-transform:uppercase;
     font-family: Beaufort for LOL Medium,Arial,sans-serif;
-    width: 175px;
+    width: 150px;
     z-index: -1;
     position: absolute;
     bottom: 12px;
-    left: -350px;
+    left: -348px;
 }
 header .extra .bg{
     height: 43px;
@@ -166,11 +182,12 @@ header .extra span{
 }
 
 header .purchase{
-    font-family: Beaufort for LOL Medium,Arial,sans-serif;
-    width: 200px;
+    text-transform:uppercase;
+    font-family: Arial, sans-serif;
+    width: 215px;
     z-index: -1;
     position: absolute;
-    right: -251px;
+    right: -266px;
     bottom: 12px;
 }
 header .purchase .bg{
@@ -199,15 +216,15 @@ header .discord{
     width: 100px;
     z-index: -1;
     position: absolute;
-    right: -350px;
+    right: -365px;
     bottom: 12px;
 }
 header .discord .bg{
     height: 43px;
     transition: .4s ease;
     background-color: #7289da;
-    border-bottom: 1px solid white;
-    border-right: 1px solid white;
+    border-bottom: 1px solid #ffffff7a;
+    border-right: 1px solid #ffffff7a;
     border-left-width: 2px;
     border-right-width: 2px;
     -ms-transform: skew(-59.2deg);
@@ -235,63 +252,11 @@ header.nav-up .img-container h1 {
     line-height: 150px;
 }
 
-.navbar {
-    font-family: 'BeaufortforLOL', serif,"Times New Roman";
-    font-size: 14px!important;
-    font-weight: 700;
-    height: 52px;
-    line-height: normal;
-    text-align: left;
-    width: 100%;
-    z-index: 99999;
-    padding:0 10px;
-}
-.navbar .navbar-nav .vertical-divider{
-    border-left: 2px solid #262626;
-    display: inline-block;
-    font-size: 14px;
-    height: 30px;
-    margin: 15px .25em;
-    vertical-align: top;
-}
-.navbar .navbar-nav .nav-item{
-    margin:10px;  /* and that, will result in a 10px gap */
-}
-.navbar .navbar-nav .nav-item:last-child{
-    margin-right:0;
-}
-.navbar .navbar-nav .nav-item:first-child{
-    margin-left:0;
-}
-.navbar .navbar-nav .nav-item a:hover {
-    color: #f1e6d0;
-    background-color: #14181d;
-    box-shadow: 0 0 16px 8px rgba(0,0,0,.5);
-}
-.navbar .navbar-nav .nav-item a {
-    color: #c9aa71;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 700;
-    width:100%;
-    line-height: 32px;
-    overflow: hidden;
-    padding: 15px 0;
-    text-transform: uppercase;
-    background-color: #101217;
-    border: 1px solid #32281f;
-    box-shadow: 0 0 16px 5px rgba(0,0,0,.4);
-    transition: all 1s cubic-bezier(.06,.81,0,.98);
-}
-.navbar .navbar-nav .nav-item.active a {
-    border-color: #7e633b;
-    color: #fff;
-}
 .slider-container{
     width: 100%;
     position: relative;
     height: 400px;
-    background-color: rgba(250,250,250, 0.2);
+    box-shadow:0 0 25px black;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0px;
@@ -315,10 +280,10 @@ header.nav-up .img-container h1 {
     height: 400px;
     clear: both;
     position: relative;
-    -webkit-transition: top 1s ease-in-out;
-    -moz-transition: top 1s ease-in-out;
-    -o-transition: top 1s ease-in-out;
-    transition: top 1s ease-in-out;
+    -webkit-transition: top 0.5s ease-in-out;
+    -moz-transition: top 0.5s ease-in-out;
+    -o-transition: top 0.5s ease-in-out;
+    transition: top 0.5s ease-in-out;
 }
 .slider-image {
     margin: auto;
@@ -333,11 +298,22 @@ header.nav-up .img-container h1 {
 #slider-image-3:target ~ .image-holder {
     top: -200%;
 }
+#slider-image-1:target ~ .button-holder a[href="#slider-image-1"]{
+    background-color:white;
+}
+#slider-image-2:target ~ .button-holder a[href="#slider-image-2"]{
+    background-color:white;
+}
+#slider-image-3:target ~ .button-holder a[href="#slider-image-3"]{
+    background-color:white;
+}
+
 .button-holder {
     position: relative;
     top: -30px;
 }
 .slider-change {
+    transition: all 0.5s ease-in-out;
     display: inline-block;
     height: 10px;
     width: 10px;
@@ -349,7 +325,7 @@ main{
     margin: 50px 0 50px;
 }
 .background-greyscale{
-    background-image: url(http://static.zerochan.net/Volibear.full.1523582.jpg);
+    background-image: url(https://euw.leagueoflegends.com/sites/default/files/styles/scale_xlarge/public/upload/environmentart-sru-04_1920_1.jpg?itok=Mm4T-50k);
     background-size: cover;
     background-position: left top;
     position: absolute;
@@ -562,7 +538,9 @@ footer{
     border-top: 1px solid #937341;
     width:100%;
     padding:10px 0;
+    position:relative;
     text-align:center;
+    z-index:999;
 }
 footer .disclaimer{
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
